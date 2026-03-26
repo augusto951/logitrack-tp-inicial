@@ -14,3 +14,8 @@ definidos en la Semana 2 y las evidencias técnicas del repositorio (código, PR
 | US15 – Historial de estados | TP09   | Registro de eventos   |
 | US17 – Timestamp de estado | TP09    | EventoDeEstado        |
 | US32 – Prioridad (ML) | TP16         | Prototipo ML en Python|
+
+
+> Nota: Las evidencias técnicas corresponden a incrementos funcionales del MVP
+> implementados mediante ramas y Pull Requests, siguiendo el flujo de trabajo
+> definido para la Semana 3.
