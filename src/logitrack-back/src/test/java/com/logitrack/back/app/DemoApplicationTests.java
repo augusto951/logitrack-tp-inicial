@@ -1,10 +1,10 @@
-package com.logitrack.back.demo;
+package com.logitrack.back.app;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class DemoApplicationTests {
+class LogitrackApplicationTests {
 
 	@Test
 	void contextLoads() {
