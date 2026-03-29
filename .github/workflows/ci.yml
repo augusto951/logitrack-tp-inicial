@@ -23,7 +23,9 @@ jobs:
 
       - name: Build & run tests
         working-directory: src/logitrack-back
-        run: ./mvnw clean verify
+        run: |
+          chmod +x mvnw
+          ./mvnw clean verify
 
   frontend:
     name: Frontend — Build & Lint
