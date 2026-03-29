@@ -21,7 +21,7 @@ jobs:
         with:
           node-version: "20"
           cache: "npm"
-          cache-dependency-path: src/logitrack-front/package-lock.json
+          cache-dependency-path: src/logitrack-front/logitrack-front/package-lock.json
 
       - name: Install deps
         run: npm ci
