@@ -4,7 +4,9 @@ function getAuthHeaders() {
   try {
     const user = JSON.parse(localStorage.getItem('logitrack_user'));
     if (user?.token) return { 'Authorization': `Bearer ${user.token}` };
-  } catch {}
+  } catch (_e) {
+    return {};
+  }
   return {};
 }
 

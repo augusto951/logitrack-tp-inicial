@@ -37,7 +37,7 @@ function DetalleEnvio() {
         setModalForm({ nuevoEstado: sig || '', fecha, hora, usuario: user?.username || '' });
       })
       .catch(() => setError('Envío no encontrado.'));
-  }, [id]);
+  }, [id, user?.username]);
 
   const abrirModal = () => {
     const { fecha, hora } = ahora();
