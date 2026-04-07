@@ -14,6 +14,7 @@ public class Envio {
     private String fechaEstimada;
     private String observaciones;
     private EstadoEnvio estado;
+    private String prioridad;
     private List<HistorialEstado> historial = new ArrayList<>();
 
     public Envio(String id, String remitente, String destinatario, String direccionEntrega, String origen,
@@ -105,4 +106,13 @@ public class Envio {
         this.historial.add(entrada);
     }
 
+    public String getPrioridad() {
+        return prioridad;
+    }
+
+    public void setPrioridad(String prioridad) {
+        this.prioridad = prioridad;
+    }
+
+    
 }

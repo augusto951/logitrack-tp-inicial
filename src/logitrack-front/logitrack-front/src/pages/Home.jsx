@@ -54,6 +54,7 @@ function Home() {
               <th>Origen</th>
               <th>Destino</th>
               <th>Estado</th>
+              <th>Prioridad</th>
               <th>Fecha estimada</th>
               <th>Acciones</th>
             </tr>
@@ -73,6 +74,7 @@ function Home() {
                   <td>{e.origen || '-'}</td>
                   <td>{e.destino || '-'}</td>
                   <td><span className={`badge badge-${e.estado}`}>{e.estado?.replace('_', ' ')}</span></td>
+                  <td>{e.prioridad || '-'}</td>
                   <td>{e.fechaEstimada || '-'}</td>
                   <td className="acciones">
                     <button
