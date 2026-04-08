@@ -28,17 +28,17 @@ public class EnvioService {
 
         Envio e2 = new Envio("2", "Empresa XYZ", "Carlos López", "Calle Falsa 456",
                 "Rosario", "Mendoza", "2026-04-05", "Frágil", EstadoEnvio.EN_TRANSITO);
+        e2.setPrioridad("MEDIA");         
         e2.agregarHistorial(new HistorialEstado(EstadoEnvio.CREADO,     "2026-03-25", "10:00", "admin"));
         e2.agregarHistorial(new HistorialEstado(EstadoEnvio.EN_TRANSITO, "2026-03-26", "08:30", "admin"));
-        e2.setPrioridad("MEDIA"); 
         envios.add(e2);
 
         Envio e3 = new Envio("3", "Transportes Sur", "María Fernández", "Belgrano 789",
                 "Salta", "Buenos Aires", "2026-03-30", "", EstadoEnvio.EN_SUCURSAL);
+        e3.setPrioridad("BAJA"); 
         e3.agregarHistorial(new HistorialEstado(EstadoEnvio.CREADO,     "2026-03-22", "14:00", "admin"));
         e3.agregarHistorial(new HistorialEstado(EstadoEnvio.EN_TRANSITO, "2026-03-24", "07:00", "admin"));
         e3.agregarHistorial(new HistorialEstado(EstadoEnvio.EN_SUCURSAL, "2026-03-27", "15:00", "admin"));
-        e3.setPrioridad("BAJA"); 
         envios.add(e3);
     }
 
@@ -70,9 +70,9 @@ public class EnvioService {
         String hoy  = LocalDate.now().toString();
         String hora = LocalTime.now().format(DateTimeFormatter.ofPattern("HH:mm"));
         nuevo.setPrioridad("MEDIA");
-        nuevo.agregarHistorial(new HistorialEstado(EstadoEnvio.CREADO, hoy, hora, "sistema"));
-      
+        nuevo.agregarHistorial(new HistorialEstado(EstadoEnvio.CREADO, hoy, hora, "sistema")); 
         envios.add(nuevo);
+
         return nuevo;
     }
 
