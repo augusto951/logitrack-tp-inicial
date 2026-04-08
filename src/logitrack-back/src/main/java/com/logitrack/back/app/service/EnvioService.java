@@ -22,7 +22,7 @@ public class EnvioService {
     public EnvioService() {
         Envio e1 = new Envio("1", "Juan Pérez", "Ana García", "Av. Siempre Viva 123",
                 "Buenos Aires", "Córdoba", "2026-04-01", "", EstadoEnvio.CREADO);
-        e1.setPrioridad("ALTA"); //prioridad simulada
+        e1.setPrioridad("ALTA"); 
         e1.agregarHistorial(new HistorialEstado(EstadoEnvio.CREADO, "2026-03-28", "09:00", "sistema"));
         envios.add(e1);
 
@@ -30,7 +30,7 @@ public class EnvioService {
                 "Rosario", "Mendoza", "2026-04-05", "Frágil", EstadoEnvio.EN_TRANSITO);
         e2.agregarHistorial(new HistorialEstado(EstadoEnvio.CREADO,     "2026-03-25", "10:00", "admin"));
         e2.agregarHistorial(new HistorialEstado(EstadoEnvio.EN_TRANSITO, "2026-03-26", "08:30", "admin"));
-        e2.setPrioridad("MEDIA"); //prioridad simulada
+        e2.setPrioridad("MEDIA"); 
         envios.add(e2);
 
         Envio e3 = new Envio("3", "Transportes Sur", "María Fernández", "Belgrano 789",
@@ -38,7 +38,7 @@ public class EnvioService {
         e3.agregarHistorial(new HistorialEstado(EstadoEnvio.CREADO,     "2026-03-22", "14:00", "admin"));
         e3.agregarHistorial(new HistorialEstado(EstadoEnvio.EN_TRANSITO, "2026-03-24", "07:00", "admin"));
         e3.agregarHistorial(new HistorialEstado(EstadoEnvio.EN_SUCURSAL, "2026-03-27", "15:00", "admin"));
-        e3.setPrioridad("BAJA"); //prioridad simulada
+        e3.setPrioridad("BAJA"); 
         envios.add(e3);
     }
 
@@ -67,14 +67,12 @@ public class EnvioService {
             EstadoEnvio.CREADO
         );
 
-        nuevo.setPrioridad("MEDIA"); //prioridad simulada
-
         String hoy  = LocalDate.now().toString();
         String hora = LocalTime.now().format(DateTimeFormatter.ofPattern("HH:mm"));
+        nuevo.setPrioridad("MEDIA");
         nuevo.agregarHistorial(new HistorialEstado(EstadoEnvio.CREADO, hoy, hora, "sistema"));
+      
         envios.add(nuevo);
-
-
         return nuevo;
     }
 
